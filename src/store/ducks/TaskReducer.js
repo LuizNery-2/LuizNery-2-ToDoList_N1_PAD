@@ -3,7 +3,9 @@ import {sha256} from 'react-native-sha256';
 export const Types = {
  
     ADD: "@TaskReducer/Add_Task",
-    CLOSE:"@TaskReducer/CLOSE_Task"
+    CLOSE:"@TaskReducer/CLOSE_Task",
+    ADD_NAME:"@TaskReducer/Add_Task",
+    IMPUTDETAILS:"@TaskReducer/IMPUTDETAILS_Task"
 
 
 
@@ -37,7 +39,9 @@ export const Creators = {
        item:{
            task: item,
            id: id,
+           
        }
    })
+
 
 }

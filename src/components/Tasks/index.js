@@ -9,8 +9,15 @@ import { Container,
         } from './styles';
 import {Feather, AntDesign} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import {useSelector,useDispatch} from 'react-redux';
 
-function Tasks(){
+
+ 
+
+
+function Tasks({title}){
+  const selector = useSelector(state => state.TaskReducer);
+
   
   const navigation = useNavigation();
   function navigationToDetails(item){
@@ -27,7 +34,7 @@ function Tasks(){
           
           </OptionBtn>
 
-        <Title></Title>
+        <Title>{title}</Title>
          
            <CloseBtn>
              <AntDesign name="close" size={30} color="#000"/>
